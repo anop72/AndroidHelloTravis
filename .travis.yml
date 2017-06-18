@@ -11,6 +11,10 @@ android:
 
     - extra-android-m2repository
 
+  licenses:
+      - 'android-sdk-license-.+'
+      - 'google-gdk-license-.+'
+
 before_script:
   - echo 'Running tests...'
 
