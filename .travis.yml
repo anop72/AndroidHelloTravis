@@ -19,4 +19,10 @@ before_install:
 before_script:
   - echo 'Running tests...'
 
-script: ./gradlew test
+jobs:
+  include:
+    - stage: build
+      - script: ./gradlew test
+
+    - stage: pre-prod
+      - script: ./gradlew assembleDebug
